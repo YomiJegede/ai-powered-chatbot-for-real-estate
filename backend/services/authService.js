@@ -1,17 +1,24 @@
-
-
+# This service handles user registration, login, and token generation logic.
+  
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-// Function to generate JWT token
+// Helper function to generate a JWT token
 const generateToken = (user) => {
   return jwt.sign({ id: user._id, email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' });
 };
 
-// Register service logic
+// Register new user
 exports.registerUser = async (userData) => {
   const { username, email, password } = userData;
+
+  // Check if the email already exists
+  const existingUser = await User.findOne({ email });
+  if (existingUser) {
+    throw new Error('User already exists');
+  }
+
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -25,16 +32,15 @@ exports.registerUser = async (userData) => {
   return newUser;
 };
 
-// Login service logic
+// Login user
 exports.loginUser = async (email, password) => {
   const user = await User.findOne({ email });
 
   if (!user) throw new Error('User not found');
   
   const isMatch = await bcrypt.compare(password, user.password);
-
   if (!isMatch) throw new Error('Invalid password');
   
-  return generateToken(user);
+  const token = generateToken(user);
+  return { user, token };
 };
-
