@@ -1,6 +1,7 @@
 # ai-powered-chatbot-for-real-estate
 
 1. Backend Directory Structure
+   
 /backend
   ├── /controllers
   │   ├── authController.js
@@ -31,6 +32,7 @@
 
 
 2. Frontend Directory Structure
+   
 /frontend
   ├── /public
   │   └── index.html
