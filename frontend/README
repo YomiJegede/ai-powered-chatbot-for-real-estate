@@ -1,0 +1,27 @@
+Install Dependencies
+Before we start coding, we need to install some dependencies:
+
+npx create-react-app frontend
+cd frontend
+npm install axios react-router-dom @mui/material @emotion/react @emotion/styled
+
+
+/frontend
+  ├── /public
+  │   └── index.html
+  ├── /src
+  │   ├── /components
+  │   │   ├── Navbar.js
+  │   │   ├── PropertyList.js
+  │   │   ├── PropertyCard.js
+  │   │   ├── Chatbot.js
+  │   │   └── LoginForm.js
+  │   ├── /services
+  │   │   └── api.js
+  │   ├── /contexts
+  │   │   └── AuthContext.js
+  │   ├── /styles
+  │   │   └── App.css
+  │   ├── App.js
+  │   ├── index.js
+  │   └── package.json
