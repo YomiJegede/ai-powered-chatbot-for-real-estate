@@ -1,4 +1,4 @@
-
+// App.js (Main Application)
 
 import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
