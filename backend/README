@@ -1,0 +1,29 @@
+
+
+/backend
+  ├── /controllers
+  │   ├── authController.js
+  │   ├── propertyController.js
+  │   └── chatbotController.js
+  ├── /models
+  │   ├── User.js
+  │   ├── Property.js
+  │   └── ChatHistory.js
+  ├── /routes
+  │   ├── authRoutes.js
+  │   ├── propertyRoutes.js
+  │   └── chatbotRoutes.js
+  ├── /services
+  │   ├── authService.js
+  │   ├── propertyService.js
+  │   └── chatbotService.js
+  ├── /middlewares
+  │   ├── authMiddleware.js
+  │   ├── isAdminMiddleware.js
+  │   └── validateRequest.js
+  ├── /utils
+  │   └── apiResponse.js
+  ├── /config
+  │   └── db.js
+  ├── app.js
+  └── package.json
