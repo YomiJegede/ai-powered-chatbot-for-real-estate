@@ -1,4 +1,4 @@
-# This service handles user registration, login, and token generation logic.
+// This service handles user registration, login, and token generation logic.
   
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
