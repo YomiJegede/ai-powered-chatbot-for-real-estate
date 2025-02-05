@@ -1,4 +1,4 @@
-# app.js (Main Express app)
+// app.js (Main Express app)
 
 const express = require('express');
 const mongoose = require('mongoose');
