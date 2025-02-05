@@ -1,4 +1,4 @@
-# This service handles all the business logic for creating and fetching properties.
+// This service handles all the business logic for creating and fetching properties.
   
 const Property = require('../models/Property');
 
